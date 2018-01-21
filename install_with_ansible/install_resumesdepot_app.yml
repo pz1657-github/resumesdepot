@@ -113,7 +113,7 @@
 
   - name: Install ResumesDepot App from Git
     git:
-     repo: "https://github.com/chiragadm/resumesdepot.git"
+     repo: "https://github.com/pz1657-github/resumesdepot.git"
      dest: /apps/resumesdepot
 
   - name: Start MongoDB
