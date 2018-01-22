@@ -115,6 +115,8 @@
     git:
      repo: "https://github.com/pz1657-github/resumesdepot.git"
      dest: /apps/resumesdepot
+#     force: yes
+     version: master
 
   - name: Start MongoDB
     service:
