@@ -29,99 +29,819 @@
         <p>Solution Schema:</p>
         <div id="" style="overflow-y: scroll;  height: 300px;">
 <pre>
-    {
-    "basics": {
-    "name": <span>"John Doe",</span>
-    "label": <span>"Programmer",</span>
-    "picture": <span>"",</span>
-    "email": <span>"john.doe@example.com"</span>
-    "phone": <span>"(912) 555-4321",</span>
-    "website": <span>"http://johndoe.com",</span>
-    "summary": <span>"A summary of John Doe...",</span>
-    "location": {
-    "address": <span>"2712 Broadway St",</span>
-    "postalCode": <span>"CA 94115",</span>
-    "city": <span>"San Francisco",</span>
-    "countryCode": <span>"US",</span>
-    "region": <span>"California"</span>
+{
+  "type": "object",
+  "required": [],
+  "properties": {
+    "id": {
+      "type": "number"
     },
-    "profiles": [{
-    "network": <span>"Twitter",</span>
-    "username": <span>"john",</span>
-    "url": <span>"http://twitter.com/john"</span>
-    }]
+    "name": {
+      "type": "string"
     },
-    "work": [{
-    "company": <span>"Company",</span>
-    "position": <span>"President",</span>
-    "website": <span>"http://company.com",</span>
-    "startDate": <span>"2013-01-01",</span>
-    "endDate": <span>"2014-01-01",</span>
-    "summary": <span>"Description...",</span>
-    "highlights": [
-    <span>"Started the company"</span>
-    ]
-    }],
-    "volunteer": [{
-    "organization": <span>"Organization",</span>
-    "position": <span>"Volunteer",</span>
-    "website": <span>"http://organization.com/",</span>
-    "startDate": <span>"2012-01-01",</span>
-    "endDate": <span>"2013-01-01",</span>
-    "summary": <span>"Description...",</span>
-    "highlights": [
-    <span>"Awarded 'Volunteer of the Month'"</span>
-    ]
-    }],
-    "education": [{
-    "institution": <span>"University",</span>
-    "area": <span>"Software Development",</span>
-    "studyType": <span>"Bachelor",</span>
-    "startDate": <span>"2011-01-01",</span>
-    "endDate": <span>"2013-01-01",</span>
-    "gpa": <span>"4.0",</span>
-    "courses": [
-    <span>"DB1101 - Basic SQL"</span>
-    ]
-    }],
-    "awards": [{
-    "title": <span>"Award",</span>
-    "date": <span>"2014-11-01",</span>
-    "awarder": <span>"Company",</span>
-    "summary": <span>"There is no spoon."</span>
-    }],
-    "publications": [{
-    "name": <span>"Publication",</span>
-    "publisher": <span>"Company",</span>
-    "releaseDate": <span>"2014-10-01",</span>
-    "website": <span>"http://publication.com",</span>
-    "summary": <span>"Description..."</span>
-    }],
-    "skills": [{
-    "name": <span>"Web Development",</span>
-    "level": <span>"Master",</span>
-    "keywords": [
-    <span>"HTML",</span>
-    <span>"CSS",</span>
-    <span>"Javascript"</span>
-    ]
-    }],
-    "languages": [{
-    "name": <span>"English",</span>
-    "level": <span>"Native speaker"</span>
-    }],
-    "interests": [{
-    "name": <span>"Wildlife",</span>
-    "keywords": [
-    <span>"Ferrets",</span>
-    <span>"Unicorns"</span>
-    ]
-    }],
-    "references": [{
-    "name": <span>"Jane Doe",</span>
-    "reference": <span>"Reference..."</span>
-    }]
+    "description": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "fabric_type": {
+      "type": "string"
+    },
+    "inventory": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "id": {
+          "type": "number"
+        },
+        "switches": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [],
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "name": {
+                "type": "string"
+              },
+              "ipAddress": {
+                "type": "string"
+              },
+              "mac": {
+                "type": "string"
+              },
+              "model": {
+                "type": "string"
+              },
+              "ports": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [],
+                  "properties": {
+                    "id": {
+                      "type": "number"
+                    },
+                    "portSpeed": {
+                      "type": "string"
+                    },
+                    "physicalType": {
+                      "type": "string"
+                    },
+                   "status": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "parent": {
+                      "type": "number"
+                    },
+                    "portType": {
+                      "type": "string"
+                    },
+                    "isSplited": {
+                      "type": "string"
+                    },
+                    "linkType": {
+                      "type": "string"
+                    },
+                    "autoNegotiate": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "pcNum": {
+                      "type": "number"
+                    },
+                    "portchannelProtocolMode": {
+                      "type": "string"
+                    },
+                    "shutdown": {
+                      "type": "string"
+                    },
+                    "assigned": {
+                      "type": "boolean"
+                    },
+                    "memberState": {
+                     "type": "string"
+                    }
+                  }
+                }
+              },
+              "vLans": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [],
+                  "properties": {
+                    "id": {
+                      "type": "number"
+                    },
+                    "vlanId": {
+                      "type": "number"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "ipv4": {
+                      "type": "string"
+                    },
+                    "ipv4_mask": {
+                      "type": "string"
+                    },
+                    "bond": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "portChannels": {
+                "type": "string"
+              },
+              "level": {
+                "type": "number"
+             },
+              "position": {
+                "type": "number"
+              },
+              "ospf": {
+                "type": "string"
+              },
+              "bgp": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "links": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [],
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "name": {
+                "type": "string"
+              },
+              "linkType": {
+                "type": "string"
+              },
+              "srcSwitch": {
+                "type": "number"
+              },
+              "dstSwitch": {
+                "type": "number"
+              },
+              "srcPort": {
+                "type": "number"
+              },
+              "dstPort": {
+                "type": "number"
+              },
+             "portSpeed": {
+                "type": "string"
+              },
+              "dstNode": {
+                "type": "number"
+              },
+              "dstNodePort": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      }
+    },
+    "rack_topology": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "id": {
+          "type": "number"
+        },
+        "nodeRacks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [],
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "name": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "mgmtSwitch": {
+                "type": "number"
+              },
+              "switches": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                }
+              },
+              "clusters": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [],
+                  "properties": {
+                    "id": {
+                      "type": "number"
+                    },
+                    "cluster_input_id": {
+                      "type": "number"
+                    },
+                    "nodes": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [],
+                        "properties": {
+                          "id": {
+                            "type": "number"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "type": {
+                            "type": "string"
+                          },
+                          "state": {
+                            "type": "string"
+                          },
+                          "ports": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "required": [],
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "portSpeed": {
+                                  "type": "string"
+                                },
+                                "physicalType": {
+                                  "type": "string"
+                                },
+                                "name": {
+                                  "type": "string"
+                                },
+                                "description": {
+                                  "type": "string"
+                                },
+                                "assigned": {
+                                  "type": "boolean"
+                                },
+                                "type": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          },
+                          "bonds": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "required": [],
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "name": {
+                                  "type": "string"
+                                },
+                                "bondNum": {
+                                  "type": "number"
+                                },
+                                "lagMode": {
+                                  "type": "string"
+                                },
+                                "links": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "number"
+                                  }
+                                },
+                                "vlans": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "number"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "downLinks": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                }
+              }
+            }
+          }
+        },
+        "racks": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "topology": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "id": {
+          "type": "number"
+        },
+        "tier": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [],
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "tierType": {
+                "type": "string"
+              },
+              "level": {
+                "type": "number"
+              },
+              "deviceGroups": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                }
+              }
+            }
+          }
+        },
+        "listOfDeviceGroups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [],
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "devices": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                }
+              },
+              "type": {
+                "type": "string"
+              },
+              "linkGroups": {
+                "type": "number"
+              },
+              "peerDeviceGroups": {
+                "type": "string"
+              },
+              "peerLinkGroups": {
+                "type": "string"
+              },
+              "externalUplinkGroups": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                }
+              },
+              "nodeDownlinkGroup": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                }
+              }
+            }
+          }
+        },
+        "listOfLinkGroups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [],
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "name": {
+                "type": "string"
+              },
+              "links": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                }
+              },
+              "type": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "fabric_settings": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "id": {
+          "type": "number"
+        },
+        "mgmt_route_ip": {
+          "type": "string"
+        },
+        "mgmt_route_mask": {
+          "type": "string"
+        },
+        "default_gateway": {
+          "type": "string"
+        },
+        "uplink_protocol_settings": {
+          "type": "string"
+        },
+        "fabricLink_protocol_settings": {
+          "type": "string"
+        },
+        "cli_credential": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "id": {
+              "type": "number"
+            },
+            "protocol": {
+              "type": "string"
+            },
+            "user": {
+              "type": "string"
+            },
+            "password": {
+              "type": "string"
+            },
+            "enablepassword": {
+              "type": "string"
+            }
+          }
+        },
+        "bom_settings": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "id": {
+              "type": "number"
+            },
+            "switch_air_flow": {
+              "type": "string"
+            },
+            "power_supply": {
+              "type": "string"
+            },
+            "redundant_power_supply_switches": {
+              "type": "boolean"
+            },
+            "tor_placement": {
+             "type": "string"
+            },
+            "cable_length_spine2tor": {
+              "type": "string"
+            },
+            "use_DAC_where_possible": {
+              "type": "boolean"
+            },
+            "use_out_of_band_mgmt": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "fabric_design_data": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "id": {
+          "type": "number"
+        },
+        "uplink_protocol_info": {
+          "type": "string"
+        },
+        "fabric_link_protocol_info": {
+          "type": "string"
+        },
+        "fabric_input": {
+          "type": "string"
+        },
+        "cluster_data": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [],
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "name": {
+                "type": "string"
+              },
+              "clusterType": {
+                "type": "string"
+              },
+              "currentNodes": {
+                "type": "number"
+              },
+              "futureNodes": {
+                "type": "string"
+              },
+              "networkResiliency": {
+                "type": "boolean"
+              },
+              "preconfigureFutureNodes": {
+                "type": "boolean"
+              },
+              "outOfBand": {
+                "type": "boolean"
+              },
+              "applianceInfo": {
+                "type": "object",
+                "required": [],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "ndcCard": {
+                    "type": "object",
+                    "required": [],
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "type": {
+                        "type": "string"
+                      },
+                      "requiredCount": {
+                        "type": "number"
+                      },
+                      "max": {
+                        "type": "number"
+                      },
+                      "ports": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [],
+                          "properties": {
+                            "count": {
+                              "type": "number"
+                            },
+                            "bandwidth": {
+                              "type": "number"
+                            },
+                            "unit": {
+                              "type": "string"
+                            },
+                            "physicalType": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "chassisType": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "optionalCard": {
+                    "type": "object",
+                    "required": [],
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "type": {
+                        "type": "string"
+                      },
+                      "requiredCount": {
+                        "type": "string"
+                      },
+                      "max": {
+                        "type": "number"
+                      },
+                      "ports": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [],
+                          "properties": {
+                            "count": {
+                              "type": "number"
+                            },
+                            "bandwidth": {
+                              "type": "number"
+                            },
+                            "unit": {
+                              "type": "string"
+                            },
+                            "physicalType": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "chassisType": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "ports": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [],
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        },
+                        "bandwidth": {
+                          "type": "number"
+                        },
+                        "unit": {
+                          "type": "string"
+                        },
+                        "physicalType": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "bonds": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [],
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        },
+                        "ports": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "required": [],
+                            "properties": {
+                              "name": {
+                                "type": "string"
+                              },
+                              "bandwidth": {
+                                "type": "number"
+                              },
+                              "unit": {
+                                "type": "string"
+                              },
+                              "physicalType": {
+                                "type": "string"
+                              },
+                              "type": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        },
+                        "lagMode": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "clusterVlans": {
+                "type": "object",
+                "required": [],
+                "properties": {
+                  "mgmt": {
+                    "type": "object",
+                    "required": [],
+                    "properties": {
+                      "vlanId": {
+                        "type": "number"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      },
+                      "ipv4": {
+                        "type": "string"
+                      },
+                      "ipv6": {
+                        "type": "string"
+                      },
+                     "bond": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "vSan": {
+                    "type": "object",
+                    "required": [],
+                    "properties": {
+                      "vlanId": {
+                        "type": "number"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      },
+                      "ipv4": {
+                        "type": "string"
+                      },
+                      "ipv6": {
+                        "type": "string"
+                      },
+                      "bond": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "vMotion": {
+                    "type": "object",
+                    "required": [],
+                    "properties": {
+                      "vlanId": {
+                        "type": "number"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "description": {
+                       "type": "string"
+                      },
+                      "ipv4": {
+                        "type": "string"
+                      },
+                      "ipv6": {
+                        "type": "string"
+                      },
+                      "bond": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "vmNetworks": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "clusterSubType": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
     }
+  }
+}
 </pre>
         </div>
     </div>
