@@ -1,5 +1,5 @@
 ---
-# Installing ResumesDepot to EC2 Instance
+# Installing SolutionsDepot to EC2 Instance
 - hosts: ec2
   remote_user: ec2-user
   become: yes
